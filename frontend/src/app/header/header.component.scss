@@ -1,0 +1,73 @@
+.app-header-fixed.app-header {
+  position: fixed;
+  left: 0;
+  right: 0;
+  margin-left: 0;
+}
+
+@media (max-width: 991.98px) {
+  .app-header {
+    left: 0;
+    padding: 0 1rem;
+  }
+}
+.app-header {
+  height: 78px;
+  padding: 0 2rem 0 1rem;
+  background: 0 0;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  z-index: 1111;
+  transition: all .5s cubic-bezier(.685,.0473,.346,1);
+}
+
+.app-header--pane {
+  display: flex;
+  align-items: center;
+}
+
+.app-header .header-border {
+  position: absolute;
+  bottom: -18px;
+  width: 19px;
+  height: 19px;
+  overflow: hidden;
+  margin: 0;
+  transition: all .5s cubic-bezier(.685,.0473,.346,1);
+}
+
+.app-header .header-border:after, .app-header .header-border:before {
+  content: "";
+  position: absolute;
+}
+.app-header .header-border:before {
+  top: 1px;
+  background: 0 0;
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  box-shadow: 0 0 0 19px #347362;
+  transition: box-shadow .5s cubic-bezier(.685,.0473,.346,1);
+}
+
+.app-header .header-border-left {
+  left: 0;
+}
+
+.app-header .header-border-right {
+  right: 0;
+}
+
+.app-header .header-border:after, .app-header .header-border:before {
+  content: "";
+  position: absolute;
+}
+
+.app-header .header-border-right:before {
+  right: 0;
+}
+
+.bg-green {
+  background-color: #347362!important;
+}

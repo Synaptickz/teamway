@@ -1,0 +1,10 @@
+<p>{{qa.question}}</p>
+
+<ng-template ngFor let-item [ngForOf]="qa.answers" let-i="index">
+  <div class="form-check">
+    <input class="form-check-input" name="radio-group" type="radio" [checked]="item.checked" (click)="select(i)">
+    <label class="form-check-label" (click)="select(i)">
+      {{item.answer}}
+    </label>
+  </div>
+</ng-template>
